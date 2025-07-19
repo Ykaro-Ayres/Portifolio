@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ykaro Souza | Cientista de Dados</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="profile-container">
+        <h1>Ykaro Souza</h1>
+        <p class="subtitle">Cientista de Dados</p>
+      </div>
+      <div class="line-photo-container">
+        <div class="profile-line-full"></div>
+        <img src="assets\foto-perfil.png" alt="Ykaro Souza" class="profile-pic" />
+      </div>
+      <div class="carousel">
+        <div class="slide active">
+          <h2>Quem Sou Eu</h2>
+          <div class="title-underline"></div>
+          <div class="slide-content">
+            <div class="column">
+              <p>Sou um profissional apaixonado por dados, com dedicação em transformar números em estratégias e resultados concretos. Minha trajetória é marcada pelo estudo contínuo e pelo compromisso com entregas de qualidade.</p>
+            </div>
+            <div class="column">
+              <p>Acredito que a combinação entre tecnologia e visão de negócios é essencial para potencializar resultados. Trabalho para construir soluções personalizadas e orientadas por dados.</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <h2>Experiência</h2>
+          <div class="title-underline"></div>
+          <div class="slide-content">
+            <div class="column">
+              <p>Desenvolvi dashboards dinâmicos e relatórios analíticos em Power BI, facilitando a visualização de indicadores estratégicos.</p>
+            </div>
+            <div class="column">
+              <p>Atuei em projetos de automação com Python e SQL, otimizando processos críticos e aumentando a confiabilidade dos dados.</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <h2>Projetos</h2>
+          <div class="title-underline"></div>
+          <div class="slide-content">
+            <div class="column">
+              <p>Desenvolvi pipelines de ETL, dashboards financeiros e soluções preditivas para identificar padrões e oportunidades.</p>
+            </div>
+            <div class="column">
+              <p>Veja abaixo exemplos de projetos com imagens e vídeos demonstrando resultados concretos.</p>
+            </div>
+          </div>
+        </div>
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="portfolio">
+    <h2>Meus Projetos</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Dashboard Vendas</h3>
+        <video controls>
+          <source src="assets\dash_gerencial.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+        <p>Visualização interativa de relação de Vendas.</p>
+      </div>
+      <div class="project-card">
+        <h3>Investimentos no Tesouro</h3>
+        <video controls>
+          <source src="assets\dash_tesouro.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+        <p>Analise de quantidade de Investimentos efetuados no tesouro.</p>
+      </div>
+      <div class="project-card">
+        <h3>Desenvolvimento de site simples.</h3>
+        <video controls>
+          <source src="assets\site redbull.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+        <p>Produção de site simples e de temática clean com inspiração na grande empresa Red Bull.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="formacoes">
+    <h2>Formações e Certificações</h2>
+    <ul>
+      <li>Ciência de Dados – DNC</li>
+      <li>Analista de Dados – DNC</li>
+      <li>Clusterização em Machine Learning</li>
+      <li>Power BI Intermediário</li>
+      <li>Excel Intermediário</li>
+      <li>Mercados Financeiros – Yale University</li>
+      <li>Desenvolvimento Web – FGV</li>
+      <li>Gestão de Operações – Insper</li>
+      <li>Liderança e Gestão de Equipes – Fundação Bradesco</li>
+    </ul>
+  </section>
+
+  <section class="download-cv">
+    <a href="#" class="btn-download" download>Baixar Currículo</a>
+  </section>
+
+  <section class="contato">
+    <h2>Entre em Contato</h2>
+    <form action="https://formsubmit.co/steffanoayres@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="message" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>📧 steffanoayres@gmail.com</p>
+    <p>📱 (27) 99744-7523</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/ykaro-souza-81953a337" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Ykaro-Ayres" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:steffanoayres@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    document.getElementById('next').addEventListener('click', () => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      slides[index].classList.remove('active');
+      index = (index - 1 + slides.length) % slides.length;
+      slides[index].classList.add('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      const overlay = document.querySelector('.hero-overlay');
+      let opacity = Math.min(window.scrollY / 500, 1);
+      overlay.style.backgroundColor = `rgba(18,18,18,${opacity})`;
+    });
+  </script>
+</body>
+</html>
